@@ -1,0 +1,79 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+body {
+    background-color: #d8d2c9; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    background: #f7f4ef;
+    width: 380px;
+    padding-bottom: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.header { background: #4A3B32; height: 100px; }
+
+/* ضبط الصورة الشخصية لتتوسط تماماً وما يتمطط شكلها أو يطلع شكلك معوج */
+.avatar {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin-top: -50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+h2 { margin: 10px 0 2px; color: #333; }
+.subtitle { color: #555; font-size: 14px; margin-bottom: 15px; font-weight: bold; }
+
+/* منطقة المحتوى المتغير بالوسط */
+#dynamic-content {
+    min-height: 140px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.description { font-size: 13px; color: #777; margin-bottom: 15px; line-height: 1.4; }
+
+.tags { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.tags span { border: 1px solid #3b312b; padding: 5px 10px; 
+    border-radius: 20px;
+     font-size: 11px; color: #777; }
+
+/* إخفاء العروض الافتراضية عند التبديل */
+.hidden-view { display: none; width: 100%; }
+
+.section-title {
+    font-size: 15px;
+    color: #4A3B32;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* تكبير وتنسيق صور الـ QR جنب بعض */
+.qr-grid { display: flex; justify-content: center; gap: 15px; }
+.qr-grid img { width: 110px; height: 110px; border-radius: 8px; border: 1px solid #ddd; }
+
+/* تنسيق نصوص الـ About Me */
+.bio-text { font-size: 12px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+
+/* الأزرار الثابتة بالأسفل */
+.actions { display: flex; justify-content: center; gap: 10px; padding: 0 20px; margin-bottom: 15px; }
+.btn-primary, .btn-secondary { padding: 10px 0; border-radius: 10px; cursor: pointer; flex: 1; font-weight: bold; border: 1px solid #4A3B32; font-size: 13px; }
+
+.btn-primary { background: #4A3B32; color: white; }
+.btn-secondary { background: white; color: #4A3B32; }
+
+.handle { font-size: 12px; color: #888; }

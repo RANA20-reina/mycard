@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invites by Rana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <!-- الجزء العلوي البني -->
+    <div class="header"></div>
+    <img src="me.jpeg" class="avatar" alt="Rana">
+    
+    <h2>Invites by Rana</h2>
+    <p class="subtitle">Web Development & Designer</p>
+    
+    <!-- القسم المتغير بالوسط -->
+    <div id="dynamic-content">
+        <!-- المحتوى الافتراضي (الوصف والمهارات) -->
+        <div id="default-view">
+            <p class="description">Building creative digital experiences, modern web applications, and custom design solutions.</p>
+            
+            <div class="tags">
+                <span>UI/UX</span>
+                <span>Web Development</span>
+                <span>Visual Identity</span>
+                <span>Designs</span>
+            </div>
+        </div>
+
+        <!-- محتوى الـ Contact Me (صور الـ QR الكبيرة) -->
+        <div id="contact-view" class="hidden-view">
+            <h3 class="section-title">Contact Me</h3>
+            <div class="qr-grid">
+                <img src="whatss.png" alt="WhatsApp QR">
+                <img src="insta.png" alt="Instagram QR">
+            </div>
+        </div>
+
+        <!-- محتوى الـ About Me (الجملتين) -->
+        <div id="about-view" class="hidden-view">
+            <h3 class="section-title">About Me</h3>
+            
+            <p class="bio-text en" dir="ltr">I'm Rana, 15 years old, studying IT and at the same time managing
+                 the "invitesbyrana"
+                 project to provide you with the best design 
+                 services—including invitations, logos, cards, and visual 
+                 identities—alongside special freelance services that meet all your needs!</p>
+        </div>
+    </div>
+    
+    <!-- الأزرار الثابتة بالأسفل -->
+    <div class="actions">
+        <button class="btn-primary" onclick="showView('contact')">Contact Me</button>
+        <button class="btn-secondary" onclick="showView('about')">About Me</button>
+    </div>
+    
+    <p class="handle">@invitesbyrana</p>
+</div>
+
+<!-- سكريبت التبديل بين الشاشات -->
+<script>
+    function showView(type) {
+        document.getElementById('default-view').style.display = 'none';
+        document.getElementById('contact-view').style.display = 'none';
+        document.getElementById('about-view').style.display = 'none';
+
+        if (type === 'contact') {
+            document.getElementById('contact-view').style.display = 'block';
+        } else if (type === 'about') {
+            document.getElementById('about-view').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
